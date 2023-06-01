@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+# npm does not work, use npx or yarn instead
+npx lint-staged
