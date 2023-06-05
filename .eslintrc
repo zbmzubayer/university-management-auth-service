@@ -12,5 +12,11 @@
   },
   "plugins": ["@typescript-eslint"],
   "ignorePatterns": ["node_modules", "dist"], // ignore linting in these directories
-  "rules": {}
+  "rules": {
+    "no-unused-vars": "error",
+    "no-undef": "error",
+    "no-unused-expressions": "error",
+    "no-unreachable": "error"
+    // "no-console": "error",
+  }
 }

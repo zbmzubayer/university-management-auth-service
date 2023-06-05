@@ -7,9 +7,8 @@ const lastUserId = async () => {
 };
 // Generate a new user id
 export const generateUserId = async () => {
-  let currentId = (await lastUserId()) || '0'.padStart(5, '0');
-  currentId++;
-  const newUserId = currentId.toString().padStart(5, '0');
+  const currentId = (await lastUserId()) || '0'.padStart(5, '0');
+  const newUserId = (parseInt(currentId) + 1).toString().padStart(5, '0');
   return newUserId;
 };
 // Generate a random password
