@@ -1,2 +1,50 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is listening on port 5000"}
+2023-06-09T06:50:12.478Z [right meow!] info: Connected to MongoDB
+2023-06-09T06:50:12.486Z [right meow!] info: Server is listening on port 5000
+2023-06-09T06:54:43.620Z [right meow!] info: Connected to MongoDB
+2023-06-09T06:54:43.627Z [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:55:35 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:55:35 PM [right meow!] info: Server is listening on port 5000
+Fri, 09 Jun 2023 07:04:33 GMT [right meow!] info: Connected to MongoDB
+Fri, 09 Jun 2023 07:04:33 GMT [right meow!] info: Server is listening on port 5000
+Fri, 09 Jun 2023 07:04:41 GMT [right meow!] info: Connected to MongoDB
+Fri, 09 Jun 2023 07:04:41 GMT [right meow!] info: Server is listening on port 5000
+Fri Jun 09 2023 [right meow!] info: Connected to MongoDB
+Fri Jun 09 2023 [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:06:28 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:06:28 PM [right meow!] info: Server is listening on port 5000
+1:06:51 PM [right meow!] info: Connected to MongoDB
+1:06:51 PM [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:07:07 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:07:07 PM [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:08:14 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:08:14 PM [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:08:15 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:08:15 PM [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:08:20 PM [right meow!] info: Connected to MongoDB
+6/9/2023, 1:08:20 PM [right meow!] info: Server is listening on port 5000
+6/9/2023, 1:08:58 PM [ZBM] info: Connected to MongoDB
+6/9/2023, 1:08:58 PM [ZBM] info: Server is listening on port 5000
+6/9/2023, 7:12:07 AM [ZBM] info: Connected to MongoDB
+6/9/2023, 7:12:07 AM [ZBM] info: Server is listening on port 5000
+6/9/2023, 1:15:06 PM [ZBM] info: Connected to MongoDB
+6/9/2023, 1:15:06 PM [ZBM] info: Server is listening on port 5000
+09/06/2023, 13:17:24 [ZBM] info: Connected to MongoDB
+09/06/2023, 13:17:24 [ZBM] info: Server is listening on port 5000
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'ZBM',
+  timestamp: '2023-06-09T07:19:48.182Z'
+}
+{
+  message: 'Server is listening on port 5000',
+  level: 'info',
+  label: 'ZBM',
+  timestamp: '2023-06-09T07:19:48.214Z'
+}
+09/06/2023, 13:22:14 [ZBM] info: Connected to MongoDB
+09/06/2023, 13:22:14 [ZBM] info: Server is listening on port 5000
+09/06/2023, 13:22:22 [ZBM] info: Connected to MongoDB
+09/06/2023, 13:22:22 [ZBM] info: Server is listening on port 5000
