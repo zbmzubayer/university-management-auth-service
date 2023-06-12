@@ -8,7 +8,6 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
   const date = new Date(timestamp).toLocaleString('en-GB');
   return `${date} [${label}] ${level}: ${message}`;
 });
-
 // Log success
 const logSuccess = createLogger({
   level: 'info',
@@ -17,7 +16,7 @@ const logSuccess = createLogger({
     new transports.Console(),
     new DailyRotateFile({
       filename: path.join(process.cwd(), 'logs', 'winston', 'successes', 'UMS-%DATE%-success.log'),
-      datePattern: 'YYYY-MM-DD-HH',
+      datePattern: 'YYYY-MM-DD', // YYYY-MM-DD-HH for hourly
       zippedArchive: true,
       maxSize: '20m',
       maxFiles: '14d',
@@ -32,7 +31,7 @@ const logErrror = createLogger({
     new transports.Console(),
     new DailyRotateFile({
       filename: path.join(process.cwd(), 'logs', 'winston', 'errors', 'UMS-%DATE%-error.log'),
-      datePattern: 'YYYY-MM-DD-HH',
+      datePattern: 'YYYY-MM-DD',
       zippedArchive: false,
       maxSize: '20m',
       maxFiles: '14d',
