@@ -12,6 +12,6 @@ const createUser = async (user: IUser) => {
   }
 };
 
-export default {
+export const userService = {
   createUser,
 };

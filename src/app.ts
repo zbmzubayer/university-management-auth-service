@@ -1,6 +1,7 @@
 import cors from 'cors';
-import express, { Application, Request, Response } from 'express';
-import userRouter from './app/modules/users/user.route';
+import express, { Application } from 'express';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import { userRouter } from './app/modules/users/user.route';
 
 const app: Application = express();
 
@@ -15,8 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1/users', userRouter);
 
 // testing
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!');
-});
+// app.get('/', (req, res, next) => {
+//   // throw new Error('Ore baba error');
+//   // throw new ApiError(400, 'Ore baba error');
+//   // next('Ore baba error');
+// });
+
+// error handler
+app.use(globalErrorHandler);
 
 export default app;
