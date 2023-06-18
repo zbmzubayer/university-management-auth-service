@@ -5,6 +5,6 @@ export type GenericErrorResponse = {
 };
 
 export type GenericErrorMessages = {
-  path: string;
+  path: string | number;
   message: string;
 };

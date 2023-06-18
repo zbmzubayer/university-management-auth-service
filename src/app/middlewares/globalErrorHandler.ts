@@ -1,7 +1,9 @@
 import { ErrorRequestHandler } from 'express';
+import { ZodError } from 'zod';
 import config from '../../config';
 import { GenericErrorMessages } from '../../types/errorResponseMessage';
 import validationErrorHandler from './validationErrorHandler';
+import zodErrorHandler from './zodErrorHandler';
 
 export class ApiError extends Error {
   constructor(public statusCode: number, message: string | undefined, public stack = '') {
@@ -25,6 +27,11 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     statusCode = commonErrorMessages.statusCode;
     message = commonErrorMessages.message;
     errorMessages = commonErrorMessages.errorMessages;
+  } else if (err instanceof ZodError) {
+    const commonErrorMessage = zodErrorHandler(err);
+    statusCode = commonErrorMessage.statusCode;
+    message = commonErrorMessage.message;
+    errorMessages = commonErrorMessage.errorMessages;
   } else if (err instanceof ApiError) {
     statusCode = err?.statusCode;
     message = err.message;

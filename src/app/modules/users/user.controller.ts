@@ -3,8 +3,10 @@ import { userService } from './user.service';
 
 const createUser: RequestHandler = async (req, res, next) => {
   try {
-    const { user } = req.body;
-    const result = await userService.createUser(user);
+    const data = req.body;
+    //await createUserZodSchema.parseAsync(data);
+    //logErrror.error(validation);
+    const result = await userService.createUser(data);
     res.status(201).json({
       success: true,
       message: 'User created',
