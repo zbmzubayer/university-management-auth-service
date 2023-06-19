@@ -1,0 +1,20 @@
+19/06/2023, 17:56:39 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 17:57:04 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 17:57:15 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 17:59:19 [ZBM] error: Unhandled Rejection:  AcademicSemester validation failed: code: Path `code` is required.
+19/06/2023, 18:04:08 [ZBM] error: Unhandled Rejection:  AcademicSemester validation failed: code: Path `code` is required.
+19/06/2023, 18:05:25 [ZBM] error: Unhandled Rejection:  Academic Semester already exist
+19/06/2023, 18:07:52 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 18:08:21 [ZBM] error: Unhandled Rejection:  Academic Semester already exist
+19/06/2023, 18:09:09 [ZBM] error: Unhandled Rejection:  Academic Semester already exist
+19/06/2023, 18:09:41 [ZBM] error: Unhandled Rejection:  Academic Semester already exist
+19/06/2023, 18:12:32 [ZBM] error: Unhandled Rejection:  Academic Semester already exist
+19/06/2023, 18:14:02 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 19:12:27 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 19:13:07 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 19:14:51 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 19:16:09 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 20:03:32 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 20:03:49 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 20:06:42 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
+19/06/2023, 20:06:56 [ZBM] error: Unhandled Rejection:  User validation failed: id: Path `id` is required.
