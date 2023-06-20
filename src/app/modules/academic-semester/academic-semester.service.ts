@@ -61,4 +61,17 @@ const getById = async (id: string): Promise<IAcademicSemester | null> => {
   return result;
 };
 
-export const academicSemesterService = { create, getAll, getById };
+const update = async (id: string, payload: IAcademicSemester): Promise<IAcademicSemester | null> => {
+  if (payload.title) {
+    payload.code = getAcademicSemesterCode(payload.title);
+  }
+  const result = await AcademicSemester.findOneAndUpdate({ _id: id }, payload, { new: true });
+  return result;
+};
+
+const deleteById = async (id: string): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findByIdAndDelete(id);
+  return result;
+};
+
+export const academicSemesterService = { create, getAll, getById, update, deleteById };

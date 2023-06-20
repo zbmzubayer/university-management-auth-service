@@ -12,7 +12,7 @@ const create = catchAsync(async (req, res) => {
   sendResponse<IAcademicSemester>(res, {
     statusCode: 201,
     success: true,
-    message: 'Academic Semester Created Successfully',
+    message: 'Academic semester created successfully',
     data: result,
   });
 });
@@ -24,7 +24,7 @@ const getAll = catchAsync(async (req, res) => {
   sendResponse<IAcademicSemester[]>(res, {
     statusCode: 200,
     success: true,
-    message: 'Academic Semester Fetched Successfully',
+    message: 'Academic semester fetched successfully',
     meta: result.meta,
     data: result.data,
   });
@@ -36,9 +36,31 @@ const getById = catchAsync(async (req, res) => {
   sendResponse<IAcademicSemester | null>(res, {
     statusCode: 200,
     success: true,
-    message: 'Academic Semester Fetched Successfully',
+    message: 'Academic semester fetched successfully',
     data: result,
   });
 });
 
-export const academicSemesterController = { create, getAll, getById };
+const update = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const data = req.body;
+  const result = await academicSemesterService.update(id, data);
+  sendResponse<IAcademicSemester | null>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Academic semester updated successfully',
+    data: result,
+  });
+});
+
+const deleteById = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await academicSemesterService.deleteById(id);
+  sendResponse<IAcademicSemester>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Academic semester deleted successfully',
+    data: result,
+  });
+});
+export const academicSemesterController = { create, getAll, getById, update, deleteById };
