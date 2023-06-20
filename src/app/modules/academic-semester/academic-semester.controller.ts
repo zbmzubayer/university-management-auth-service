@@ -30,4 +30,15 @@ const getAll = catchAsync(async (req, res) => {
   });
 });
 
-export const academicSemesterController = { create, getAll };
+const getById = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await academicSemesterService.getById(id);
+  sendResponse<IAcademicSemester | null>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Academic Semester Fetched Successfully',
+    data: result,
+  });
+});
+
+export const academicSemesterController = { create, getAll, getById };
