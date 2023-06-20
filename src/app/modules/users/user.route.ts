@@ -5,10 +5,6 @@ import { userValidation } from './user.validation';
 
 const router = Router();
 
-router.post(
-  '/create',
-  validateRequest(userValidation.createUserZodSchema),
-  userController.createUser
-);
+router.post('/create', validateRequest(userValidation.createUserZodSchema), userController.createUser);
 
 export const userRouter = router;

@@ -1,10 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { ApiError } from '../../middlewares/globalErrorHandler';
-import {
-  AcademicSemesterCodes,
-  AcademicSemesterMonths,
-  AcademicSemesterTitles,
-} from './academic-semester.constants';
+import { AcademicSemesterCodes, AcademicSemesterMonths, AcademicSemesterTitles } from './academic-semester.constants';
 import { IAcademicSemester } from './academic-semester.interface';
 
 // Schema for the Academic Semester model
@@ -54,7 +50,4 @@ academicSemesterSchema.pre('save', async function (next) {
 });
 
 // Model for the Academic Semester
-export const AcademicSemester = model<IAcademicSemester>(
-  'AcademicSemester',
-  academicSemesterSchema
-);
+export const AcademicSemester = model<IAcademicSemester>('AcademicSemester', academicSemesterSchema);

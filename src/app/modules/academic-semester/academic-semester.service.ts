@@ -11,14 +11,36 @@ const create = async (payload: IAcademicSemester): Promise<IAcademicSemester> =>
   return createdAcademicSemester;
 };
 
-const getAll = async (paginationOptions: PaginationOptions): Promise<PaginationResult<IAcademicSemester[]>> => {
+const getAll = async (
+  search: { searchTerm?: string },
+  paginationOptions: PaginationOptions
+): Promise<PaginationResult<IAcademicSemester[]>> => {
   const { page, limit, skip, sortBy, order } = paginationHelper.calculatePagination(paginationOptions);
+  const { searchTerm } = search;
   const sortCondition: { [key: string]: SortOrder } = {};
   if (sortBy && order) {
     sortCondition[sortBy] = order;
   }
+  const searchFields = ['title', 'code', 'year'];
+  const searchCondition = [];
+  if (searchTerm) {
+    searchCondition.push({
+      $or: searchFields.map(field => ({
+        [field]: { $regex: searchTerm, $options: 'i' },
+      })),
+    });
+  }
+  // const searchCondition = [
+  //   {
+  //     $or: [
+  //       { title: { $regex: searchTerm, $options: 'i' } },
+  //       { code: { $regex: searchTerm, $options: 'i' } },
+  //       { year: { $regex: searchTerm, $options: 'i' } },
+  //     ],
+  //   },
+  // ];
   const total = await AcademicSemester.countDocuments();
-  const result = await AcademicSemester.find().sort(sortCondition).skip(skip).limit(limit);
+  const result = await AcademicSemester.find({ $and: searchCondition }).sort(sortCondition).skip(skip).limit(limit);
   return {
     meta: { page, limit, total },
     data: result,

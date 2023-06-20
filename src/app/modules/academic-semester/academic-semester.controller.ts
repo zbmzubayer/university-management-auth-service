@@ -18,8 +18,9 @@ const create = catchAsync(async (req, res) => {
 
 const getAll = catchAsync(async (req, res) => {
   const paginationOptions = pick(req.query, paginationFields);
-  console.log(paginationOptions);
-  const result = await academicSemesterService.getAll(paginationOptions);
+  const searchTerm = pick(req.query, ['searchTerm']);
+  console.log(searchTerm, paginationOptions);
+  const result = await academicSemesterService.getAll(searchTerm, paginationOptions);
   sendResponse<IAcademicSemester[]>(res, {
     statusCode: 200,
     success: true,
