@@ -1,5 +1,7 @@
 import catchAsync from '../../../shared/catchAsync';
+import { pick } from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
+import { paginationFields } from '../../../types/pagination';
 import { IAcademicSemester } from './academic-semester.interface';
 import { academicSemesterService } from './academic-semester.service';
 
@@ -14,4 +16,17 @@ const create = catchAsync(async (req, res) => {
   });
 });
 
-export const academicSemesterController = { create };
+const getAll = catchAsync(async (req, res) => {
+  const paginationOptions = pick(req.query, paginationFields);
+  console.log(paginationOptions);
+  const result = await academicSemesterService.getAll(paginationOptions);
+  sendResponse<IAcademicSemester[]>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Academic Semester Fetched Successfully',
+    meta: result.meta,
+    data: result.data,
+  });
+});
+
+export const academicSemesterController = { create, getAll };
