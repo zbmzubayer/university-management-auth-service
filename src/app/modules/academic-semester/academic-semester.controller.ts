@@ -2,6 +2,7 @@ import catchAsync from '../../../shared/catchAsync';
 import { pick } from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { paginationFields } from '../../../types/pagination';
+import { academicSemesterFilterFields } from './academic-semester.constants';
 import { IAcademicSemester } from './academic-semester.interface';
 import { academicSemesterService } from './academic-semester.service';
 
@@ -18,8 +19,7 @@ const create = catchAsync(async (req, res) => {
 
 const getAll = catchAsync(async (req, res) => {
   const paginationOptions = pick(req.query, paginationFields);
-  const searchTerm = pick(req.query, ['searchTerm']);
-  console.log(searchTerm, paginationOptions);
+  const searchTerm = pick(req.query, academicSemesterFilterFields);
   const result = await academicSemesterService.getAll(searchTerm, paginationOptions);
   sendResponse<IAcademicSemester[]>(res, {
     statusCode: 200,

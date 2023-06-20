@@ -14,3 +14,5 @@ export const AcademicSemesterMonths = [
   'November',
   'December',
 ];
+export const academicSemesterSearchFields = ['title', 'code', 'year'];
+export const academicSemesterFilterFields = ['searchTerm', 'title', 'code', 'year'];

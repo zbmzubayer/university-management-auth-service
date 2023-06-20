@@ -1,6 +1,7 @@
 import { SortOrder } from 'mongoose';
 import { paginationHelper } from '../../../helpers/paginationHelper';
 import { PaginationOptions, PaginationResult } from '../../../types/pagination';
+import { academicSemesterSearchFields } from './academic-semester.constants';
 import { IAcademicSemester } from './academic-semester.interface';
 import { AcademicSemester } from './academic-semester.model';
 import { getAcademicSemesterCode } from './academic-semester.util';
@@ -16,20 +17,28 @@ const getAll = async (
   paginationOptions: PaginationOptions
 ): Promise<PaginationResult<IAcademicSemester[]>> => {
   const { page, limit, skip, sortBy, order } = paginationHelper.calculatePagination(paginationOptions);
-  const { searchTerm } = search;
+  const { searchTerm, ...filterFields } = search;
   const sortCondition: { [key: string]: SortOrder } = {};
   if (sortBy && order) {
     sortCondition[sortBy] = order;
   }
-  const searchFields = ['title', 'code', 'year'];
-  const searchCondition = [];
+  const searchFields = academicSemesterSearchFields;
+  const andConditions = [];
   if (searchTerm) {
-    searchCondition.push({
+    andConditions.push({
       $or: searchFields.map(field => ({
         [field]: { $regex: searchTerm, $options: 'i' },
       })),
     });
   }
+  if (Object.keys(filterFields).length) {
+    andConditions.push({
+      $and: Object.entries(filterFields).map(([key, value]) => ({
+        [key]: value,
+      })),
+    });
+  }
+  const whereCondition = andConditions.length ? { $and: andConditions } : {};
   // const searchCondition = [
   //   {
   //     $or: [
@@ -40,7 +49,7 @@ const getAll = async (
   //   },
   // ];
   const total = await AcademicSemester.countDocuments();
-  const result = await AcademicSemester.find({ $and: searchCondition }).sort(sortCondition).skip(skip).limit(limit);
+  const result = await AcademicSemester.find(whereCondition).sort(sortCondition).skip(skip).limit(limit);
   return {
     meta: { page, limit, total },
     data: result,
