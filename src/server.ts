@@ -2,12 +2,12 @@ import { Server } from 'http';
 import mongoose from 'mongoose';
 import app from './app';
 import config from './config/index';
-import { logErrror, logSuccess } from './shared/logger';
+import { logError, logSuccess } from './shared/logger';
 
 let server: Server;
 
 process.on('uncaughtException', err => {
-  logErrror.error('Uncaught Exception: ', err);
+  logError.error('Uncaught Exception: ', err);
   process.exit(1);
 });
 
@@ -20,10 +20,10 @@ async function bootstrap() {
       logSuccess.info(`Server is listening on port ${config.port}`);
     });
   } catch (err) {
-    logErrror.error('Failed: ', err);
+    logError.error('Failed: ', err);
   }
   process.on('unhandledRejection', err => {
-    logErrror.error('Unhandled Rejection: ', err);
+    logError.error('Unhandled Rejection: ', err);
     if (server) {
       server.close();
     }

@@ -1,6 +1,7 @@
 import { ErrorRequestHandler } from 'express';
 import { ZodError } from 'zod';
 import config from '../../config';
+import { logError } from '../../shared/logger';
 import { GenericErrorMessages } from '../../types/errorResponseMessage';
 import castErrorHandler from './castErrorHandler';
 import validationErrorHandler from './validationErrorHandler';
@@ -18,7 +19,12 @@ export class ApiError extends Error {
   }
 }
 
-const globalErrorHandler: ErrorRequestHandler = (err, req, res) => {
+// eslint-disable-next-line no-unused-vars
+const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
+  if (config.env === 'development') {
+    logError.error('⚠️⚠️⚠️  Global Error Handler: ', err);
+  }
+
   let statusCode = 500;
   let message = 'Something went wrong!';
   let errorMessages: GenericErrorMessages[] = [];
@@ -46,12 +52,14 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res) => {
     message = err?.message;
     errorMessages = err?.message ? [{ path: '', message: err?.message }] : [];
   }
+
   res.status(statusCode).json({
     success: false,
     message,
     errorMessages,
     stack: config.env != 'production' ? err?.stack : undefined,
   });
+  next();
 };
 
 export default globalErrorHandler;

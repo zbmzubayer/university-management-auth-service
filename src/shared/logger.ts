@@ -24,7 +24,7 @@ const logSuccess = createLogger({
   ],
 });
 // Log error
-const logErrror = createLogger({
+const logError = createLogger({
   level: 'error',
   format: combine(label({ label: 'ZBM' }), timestamp(), myFormat),
   transports: [
@@ -39,4 +39,4 @@ const logErrror = createLogger({
   ],
 });
 
-export { logErrror, logSuccess };
+export { logError, logSuccess };

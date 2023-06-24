@@ -1,0 +1,124 @@
+24/06/2023, 14:22:17 [ZBM] error: Failed:  Cannot read properties of undefined (reading 'databaseUrl')
+24/06/2023, 14:22:36 [ZBM] error: Failed:  Cannot read properties of undefined (reading 'databaseUrl')
+24/06/2023, 14:22:59 [ZBM] error: Failed:  Cannot read properties of undefined (reading 'databaseUrl')
+24/06/2023, 14:26:50 [ZBM] error: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:28:34 [ZBM] error: 🪲Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:29:51 [ZBM] error: 🪲Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:30:05 [ZBM] error: 🪲Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:31:15 [ZBM] error: 🪲Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:33:12 [ZBM] error: ⚠️ Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:33:22 [ZBM] error: ⚠️ Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:34:03 [ZBM] error: ⚠️->Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:34:29 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:35:39 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]
+24/06/2023, 14:35:39 [ZBM] error: Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "title"
+    ],
+    "message": "Title is required"
+  }
+]

@@ -29,7 +29,7 @@ app.use(globalErrorHandler);
 // Handle not found routes
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(404).json({
-    succcess: false,
+    success: false,
     message: 'API route not found',
     errorMessages: [
       {

@@ -63,4 +63,5 @@ const deleteById = catchAsync(async (req, res) => {
     data: result,
   });
 });
+
 export const academicSemesterController = { create, getAll, getById, update, deleteById };
