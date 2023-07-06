@@ -19,7 +19,7 @@ export class ApiError extends Error {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   if (config.env === 'development') {
     logError.error('⚠️⚠️⚠️  Global Error Handler: ', err);
@@ -59,7 +59,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     errorMessages,
     stack: config.env != 'production' ? err?.stack : undefined,
   });
-  next();
+  // next();
 };
 
 export default globalErrorHandler;
