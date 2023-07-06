@@ -1,0 +1,4 @@
+06/07/2023, 21:16:21 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Cast to ObjectId failed for value "Faculty of Scienc and Technology" (type string) at path "academicFaculty" for model "AcademicDepartment"
+06/07/2023, 21:16:45 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Cast to ObjectId failed for value "Faculty of Scienc and Technology" (type string) at path "academicFaculty" for model "AcademicDepartment"
+06/07/2023, 21:16:53 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Cast to ObjectId failed for value "Faculty of Scienc and Technology" (type string) at path "academicFaculty" for model "AcademicDepartment"
+06/07/2023, 21:18:11 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Cast to ObjectId failed for value "Faculty of Scienc and Technology" (type string) at path "academicFaculty" for model "AcademicDepartment"
