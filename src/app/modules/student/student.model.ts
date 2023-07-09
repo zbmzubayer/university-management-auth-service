@@ -16,11 +16,7 @@ export const studentSchema = new Schema<IStudent>(
     phone: { type: String, required: true, unique: true },
     gender: { type: String, required: true, enum: userGender },
     dob: { type: Date, required: true },
-    bloodGroup: {
-      type: String,
-      required: true,
-      enum: userBloodGroup,
-    },
+    bloodGroup: { type: String, enum: userBloodGroup },
     presentAddress: { type: String, required: true },
     permanentAddress: { type: String, required: true },
     guardian: {
