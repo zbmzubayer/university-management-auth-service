@@ -41,4 +41,17 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
+// const academicSemester = {
+//   title: 'Spring',
+//   year: '2020-2021',
+//   code: '01',
+//   startMonth: 'September',
+//   endMonth: 'July',
+// };
+// const testId = async () => {
+//   const id = await generateStudentId(academicSemester);
+//   console.log(id);
+// };
+// testId();
+
 export default app;

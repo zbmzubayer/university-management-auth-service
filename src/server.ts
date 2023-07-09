@@ -14,7 +14,7 @@ process.on('uncaughtException', err => {
 // Database connection and server startup
 async function bootstrap() {
   try {
-    await mongoose.connect(config.databaseUrl as string);
+    await mongoose.connect(config.databaseUrlRemote as string);
     logSuccess.info('Connected to MongoDB');
     server = app.listen(config.port, () => {
       logSuccess.info(`Server is listening on port ${config.port}`);

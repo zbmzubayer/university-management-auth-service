@@ -1,0 +1,314 @@
+08/07/2023, 23:08:48 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "name"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "phone"
+    ],
+    "message": "Phone is required"
+  },
+  {
+    "expected": "'Male' | 'Female'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "gender"
+    ],
+    "message": "Gender is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "undefined",
+    "path": [
+      "dob"
+    ],
+    "message": "Date of Birth is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "presentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "permanentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "guardian"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "localGuardian"
+    ],
+    "message": "Required"
+  }
+]
+08/07/2023, 23:09:40 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "name"
+    ],
+    "message": "Name is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "phone"
+    ],
+    "message": "Phone is required"
+  },
+  {
+    "expected": "'Male' | 'Female'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "gender"
+    ],
+    "message": "Gender is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "undefined",
+    "path": [
+      "dob"
+    ],
+    "message": "Date of Birth is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "presentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "permanentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "guardian"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "localGuardian"
+    ],
+    "message": "Required"
+  }
+]
+08/07/2023, 23:23:15 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Expected ':' after property name in JSON at position 18
+08/07/2023, 23:23:52 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Expected ':' after property name in JSON at position 18
+08/07/2023, 23:24:01 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "student"
+    ],
+    "message": "Required"
+  }
+]
+08/07/2023, 23:24:15 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Unexpected token '}', ..."udent": 
+}" is not valid JSON
+08/07/2023, 23:24:20 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "string",
+    "path": [
+      "student"
+    ],
+    "message": "Expected object, received string"
+  }
+]
+08/07/2023, 23:24:31 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "student",
+      "name"
+    ],
+    "message": "Name is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "email"
+    ],
+    "message": "Email is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "phone"
+    ],
+    "message": "Phone is required"
+  },
+  {
+    "expected": "'Male' | 'Female'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "student",
+      "gender"
+    ],
+    "message": "Gender is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "undefined",
+    "path": [
+      "student",
+      "dob"
+    ],
+    "message": "Date of Birth is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "presentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "permanentAddress"
+    ],
+    "message": "Address is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "student",
+      "guardian"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "student",
+      "localGuardian"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "academicSemester"
+    ],
+    "message": "Academic semester is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "academicFaculty"
+    ],
+    "message": "Academic faculty is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "student",
+      "academicDepartment"
+    ],
+    "message": "Academic department is required"
+  }
+]
