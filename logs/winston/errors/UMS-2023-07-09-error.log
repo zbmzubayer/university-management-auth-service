@@ -1890,3 +1890,52 @@
 09/07/2023, 18:11:14 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
 09/07/2023, 18:13:33 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Student not found
 09/07/2023, 18:14:07 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+09/07/2023, 19:57:44 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "faculty"
+    ],
+    "message": "Faculty is required"
+  }
+]
+09/07/2023, 19:58:28 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "faculty",
+      "designation"
+    ],
+    "message": "Designation is required"
+  }
+]
+09/07/2023, 19:58:59 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Student validation failed: academicSemester: Path `academicSemester` is required., localGuardian: Path `localGuardian` is required., guardian: Path `guardian` is required., studentId: Path `studentId` is required.
+09/07/2023, 20:04:05 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 20:04:05 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:16:29 [ZBM] error: Failed:  Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+09/07/2023, 20:17:25 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 20:17:25 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:45:03 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 20:45:04 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:46:34 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 20:46:34 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:50:41 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 20:50:41 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:52:46 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-100001" }
+09/07/2023, 20:52:46 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:54:00 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-100001" }
+09/07/2023, 20:54:00 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 20:54:49 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-100001" }
+09/07/2023, 20:54:49 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 21:02:16 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.faculties index: facultyId_1 dup key: { facultyId: "F-00001" }
+09/07/2023, 21:02:17 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 21:10:22 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.users index: id_1 dup key: { id: "F-100001" }
+09/07/2023, 21:10:22 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+09/07/2023, 21:17:15 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Student not found
+09/07/2023, 21:17:29 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Faculty not found
+09/07/2023, 21:18:59 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+09/07/2023, 21:22:51 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Student not found

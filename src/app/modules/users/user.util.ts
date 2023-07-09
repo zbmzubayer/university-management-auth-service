@@ -14,6 +14,18 @@ export const generateStudentId = async (academicSemester: IAcademicSemester) => 
   const middleId = (parseInt(idArray[1]) + 1).toString().padStart(5, '0');
   return `${academicSemester.year.substring(2, 4)}-${middleId}-${academicSemester.code}`;
 };
+// Find the last faculty id
+const findLastFacultyId = async () => {
+  const lastFacultyId = await User.findOne({ role: 'faculty' }, { id: 1, _id: 0 }).sort({ createdAt: -1 }).lean();
+  return lastFacultyId?.id;
+};
+// Generate a new faculty id
+export const generateFacultyId = async () => {
+  const initialId = `F-1${'0'.padStart(5, '0')}`;
+  const currentId = (await findLastFacultyId()) || initialId;
+  const incrementId = (parseInt(currentId.substring(2)) + 1).toString().padStart(5, '0');
+  return `F-${incrementId}`;
+};
 // Generate a random password
 export const generatePassword = (): string => {
   const randomPassword = Math.floor(10000000 + Math.random() * 90000000);
