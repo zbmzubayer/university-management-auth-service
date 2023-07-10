@@ -8,7 +8,7 @@ type FullName = {
 };
 
 export interface IAdmin {
-  id: string;
+  adminId: string;
   name: FullName;
   email: string;
   phone: string;
