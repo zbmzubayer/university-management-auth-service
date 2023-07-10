@@ -26,6 +26,18 @@ export const generateFacultyId = async () => {
   const incrementId = (parseInt(currentId.substring(2)) + 1).toString().padStart(5, '0');
   return `F-${incrementId}`;
 };
+// Find the last admin id
+export const findLastAdminId = async () => {
+  const lastAdminId = await User.findOne({ role: 'admin' }, { id: 1, _id: 0 }).sort({ createdAt: -1 }).lean();
+  return lastAdminId?.id;
+};
+// Generate a new admin id
+export const generateAdminId = async () => {
+  const initialId = `A-1${'0'.padStart(5, '0')}`;
+  const currentId = (await findLastAdminId()) || initialId;
+  const incrementId = (parseInt(currentId.substring(2)) + 1).toString().padStart(5, '0');
+  return `A-${incrementId}`;
+};
 // Generate a random password
 export const generatePassword = (): string => {
   const randomPassword = Math.floor(10000000 + Math.random() * 90000000);

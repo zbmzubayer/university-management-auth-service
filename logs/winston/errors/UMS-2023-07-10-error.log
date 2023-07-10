@@ -1,0 +1,20 @@
+10/07/2023, 15:35:50 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "admin"
+    ],
+    "message": "Admin is required"
+  }
+]
+10/07/2023, 15:37:08 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Cannot populate path `admin` because it is not in your schema. Set the `strictPopulate` option to false to override.
+10/07/2023, 15:37:59 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  E11000 duplicate key error collection: university-management.admins index: email_1 dup key: { email: "tanvir@gmail.com" }
+10/07/2023, 15:38:00 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+10/07/2023, 15:40:33 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Faculty not found
+10/07/2023, 15:40:37 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Admin not found
+10/07/2023, 15:40:44 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Admin not found
+10/07/2023, 15:43:04 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+10/07/2023, 15:45:34 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_COMMITTED] to [TRANSACTION_ABORTED]
+10/07/2023, 15:46:08 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
