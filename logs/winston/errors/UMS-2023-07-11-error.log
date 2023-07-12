@@ -1,0 +1,39 @@
+11/07/2023, 16:12:57 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "id"
+    ],
+    "message": "Id is required"
+  }
+]
+11/07/2023, 16:13:03 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Password is required"
+  }
+]
+11/07/2023, 16:13:24 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  this.findOne is not a function
+11/07/2023, 16:16:25 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:17:39 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:17:45 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:19:24 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  User does not exist
+11/07/2023, 16:23:34 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid password
+11/07/2023, 16:25:20 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:25:33 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:25:58 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 16:36:02 [ZBM] error: Failed:  querySrv ETIMEOUT _mongodb._tcp.cluster0.f3pch0c.mongodb.net
+11/07/2023, 16:38:48 [ZBM] error: Failed:  querySrv ETIMEOUT _mongodb._tcp.cluster0.f3pch0c.mongodb.net
+11/07/2023, 16:42:43 [ZBM] error: Failed:  querySrv ETIMEOUT _mongodb._tcp.cluster0.f3pch0c.mongodb.net
+11/07/2023, 16:48:17 [ZBM] error: Failed:  querySrv ETIMEOUT _mongodb._tcp.cluster0.f3pch0c.mongodb.net
+11/07/2023, 17:03:22 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 17:03:35 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  User does not exist
+11/07/2023, 17:03:42 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+11/07/2023, 17:05:44 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials

@@ -1,0 +1,6 @@
+12/07/2023, 01:01:18 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid credentials
+12/07/2023, 18:20:20 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid refresh token
+12/07/2023, 18:21:07 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+12/07/2023, 18:21:44 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Invalid refresh token
+12/07/2023, 18:25:44 [ZBM] error: Unhandled Rejection:  Attempted illegal state transition from [TRANSACTION_COMMITTED] to [TRANSACTION_ABORTED]
+12/07/2023, 18:26:09 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  User does not exist

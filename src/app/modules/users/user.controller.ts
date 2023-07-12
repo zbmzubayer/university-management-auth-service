@@ -7,6 +7,7 @@ const createStudent = catchAsync(async (req, res) => {
   //await createUserZodSchema.parseAsync(data);
   //logError.error(validation);
   const { user, student } = req.body;
+  console.log(req.cookies);
   const result = await userService.createStudent(user, student);
   sendResponse<IUser>(res, {
     statusCode: 201,
