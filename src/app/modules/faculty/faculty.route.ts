@@ -7,7 +7,7 @@ import { facultyValidation } from './faculty.validation';
 
 const router = Router();
 
-router.get('/', auth(UserRoles.SuperAdmin, UserRoles.Admin), facultyController.getAll);
+router.get('/', facultyController.getAll);
 router.get('/:id', facultyController.getById);
 router.patch(
   '/:id',

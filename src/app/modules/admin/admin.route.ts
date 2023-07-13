@@ -8,7 +8,7 @@ import { adminValidation } from './admin.validation';
 const router = Router();
 
 router.get('/', auth(UserRoles.SuperAdmin, UserRoles.Admin), adminController.getAll);
-router.get('/:id', adminController.getById);
+router.get('/:id', auth(UserRoles.SuperAdmin, UserRoles.Admin), adminController.getById);
 router.patch(
   '/:id',
   auth(UserRoles.SuperAdmin),

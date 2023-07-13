@@ -21,7 +21,7 @@ router.post(
 );
 router.post(
   '/create-admin',
-  auth(UserRoles.SuperAdmin, UserRoles.Admin),
+  auth(UserRoles.SuperAdmin),
   validateRequest(userValidation.createAdminZodSchema),
   userController.createAdmin
 );
