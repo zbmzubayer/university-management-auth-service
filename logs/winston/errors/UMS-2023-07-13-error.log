@@ -49,3 +49,9 @@
     "message": "Refresh token is required"
   }
 ]
+13/07/2023, 18:19:29 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Unauthorized
+13/07/2023, 18:19:59 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Incorrect password
+13/07/2023, 18:20:43 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Incorrect password
+13/07/2023, 18:20:46 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Incorrect password
+13/07/2023, 18:21:49 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  New password cannot be same as old password
+13/07/2023, 18:22:39 [ZBM] error: ⚠️⚠️⚠️  Global Error Handler:  Incorrect password

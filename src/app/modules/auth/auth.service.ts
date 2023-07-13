@@ -1,10 +1,11 @@
-import { Secret } from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
+import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
 import { jwtHelper } from '../../../helpers/jwtHelper';
 import { ApiError } from '../../middlewares/globalErrorHandler';
 import { IUser } from '../users/user.interface';
 import { User } from '../users/user.model';
-import { IAuth, IToken } from './auth.interface';
+import { IAuth, IChangePassword, IToken } from './auth.interface';
 
 const login = async (payload: IAuth): Promise<IToken> => {
   const { id, password } = payload;
@@ -44,4 +45,28 @@ const getAccessToken = async (refreshToken: string): Promise<IToken> => {
   return { accessToken: accessToken };
 };
 
-export const authService = { login, getAccessToken };
+const changePassword = async (payload: JwtPayload | null, data: IChangePassword): Promise<boolean> => {
+  const user = new User();
+  const isUserExist = await user.isUserExist(payload?.id);
+  // check if user exist
+  if (!isUserExist) throw new ApiError(404, 'User does not exist');
+  const isPasswordValid = await user.isPasswordValid(data.oldPassword, isUserExist as IUser);
+  // check if old password is correct
+  if (!isPasswordValid) throw new ApiError(400, 'Incorrect password');
+  // check if old password and new password are same
+  if (data.oldPassword === data.newPassword) throw new ApiError(400, 'New password cannot be same as old password');
+  // hash password
+  const newHashedPassword = await bcrypt.hash(data.newPassword, Number(config.bcryptSaltRounds));
+  // update data
+  const query = { id: payload?.id };
+  const updatedData = {
+    password: newHashedPassword,
+    passwordChanged: true,
+    passwordChangedAt: new Date(),
+  };
+  const updatedUser = await User.findOneAndUpdate(query, updatedData);
+  if (updatedUser) return true;
+  else return false;
+};
+
+export const authService = { login, getAccessToken, changePassword };

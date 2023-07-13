@@ -18,7 +18,7 @@ const login = catchAsync(async (req, res) => {
   sendResponse<IToken>(res, {
     statusCode: 200,
     success: true,
-    message: 'Login successful',
+    message: 'Logged in successfully',
     data: { accessToken: result.accessToken },
   });
 });
@@ -35,9 +35,21 @@ const getAccessToken = catchAsync(async (req, res) => {
   sendResponse<IToken>(res, {
     statusCode: 200,
     success: true,
-    message: 'Login successful',
+    message: 'New access token is generated successfully',
     data: result,
   });
 });
 
-export const authController = { login, getAccessToken };
+const changePassword = catchAsync(async (req, res) => {
+  const user = req.user;
+  const data = req.body;
+  const result = await authService.changePassword(user, data);
+  sendResponse<boolean>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Password is changed successfully',
+    data: result,
+  });
+});
+
+export const authController = { login, getAccessToken, changePassword };

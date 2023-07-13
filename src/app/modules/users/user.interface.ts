@@ -9,6 +9,7 @@ export interface IUser {
   role: string;
   password: string;
   passwordChanged: boolean;
+  passwordChangedAt?: Date;
   student?: Types.ObjectId | IStudent;
   faculty?: Types.ObjectId | IFaculty;
   admin?: Types.ObjectId | IAdmin;
